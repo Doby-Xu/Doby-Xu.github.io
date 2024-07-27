@@ -1,0 +1,119 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hengyuan Xu – 经验谈</title>
+    <link>http://localhost:1313/zh/blog/experience/</link>
+    <description>Recent content in 经验谈 on Hengyuan Xu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    
+	  <atom:link href="http://localhost:1313/zh/blog/experience/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>夏令营经验</title>
+      <link>http://localhost:1313/zh/blog/experience/master_apply/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/blog/experience/master_apply/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;TL;DR&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;tldr&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#tldr&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
+        ℹ️
+      &lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;
+      TL;DR: 总体上的成功经验是：&lt;strong&gt;导师更喜欢一进组就能干活的同学，英语强，有科研经验（写过论文做过实验的）加大分&lt;/strong&gt;。有些资本是要靠前几年的积累，有些知识则要短时间突击。
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;先说笔者保研时的资本：&lt;/p&gt;
+&lt;p&gt;上海交通大学电院末流专业，成绩5%，六级618（好像是），有比较丰富的科研经历，夏令营时有一篇三作ICDM，一篇NeurIPS一作在投。&lt;/p&gt;
+&lt;h2&gt;夏令营选择&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;夏令营选择&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%a4%8f%e4%bb%a4%e8%90%a5%e9%80%89%e6%8b%a9&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;夏令营海了三个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;复旦CS，接受学硕offer&lt;/li&gt;
+&lt;li&gt;交大CS，机考崩了，拒绝了专硕offer&lt;/li&gt;
+&lt;li&gt;自动化所，过了面试，进入双选前接受复旦offer，自行退出。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;整体上三家的考核风格是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对机考/代码能力的重视程度：交大 &amp;gt; 复旦 &amp;gt; 自动化所&lt;/li&gt;
+&lt;li&gt;对面试/导师关系的重视程度：交大 &amp;lt; 复旦 &amp;lt; 自动化所&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;交大&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;交大&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e4%ba%a4%e5%a4%a7&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;总结：&lt;/strong&gt; 机考巨难，没搞过信息竞赛建议LeetCode迅速走起（大三的话现在开始准备好像有亿点晚了）&lt;/p&gt;
+&lt;p&gt;机考和面试的比重1:1，所以如果没有太多科研经验，没有信心在面试的时候俘获导师的芳心，机考要好好准备。笔者那年机考有三道题，个人感觉均是LeetCode hard难度，字里行间写满了“你不配”。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;考核方式：&lt;/strong&gt; 交大的考核中，是200分，机考面试各100，考核结束后按排名给offer，排名靠前的拒绝了offer，会顺次轮给下面的同学。录取率还挺高的。但是这也导致导师操作空间很小（就算导师拉关系给你把面试搞满分，机考崩了也是崩了）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;机考：&lt;/strong&gt; 笔者前一届机考两题，一题是手搓TSP，一题是手搓计算器。难度笔者便不评价了。笔者这一届三道题，一是最小生成树，二忘记了，三是手搓Round Robin调度算法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;面试：&lt;/strong&gt; 面试的话，其实各家都差不多，大致分为几个方面问你：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- 基础知识，高数、概率和数据结构。会突然间有一段英语问答。
+    - 交大好像没有问我基础知识，只记得突然来了句 “Who&#39;s your advisor?”
+- 科研经历，问你做过什么，老师感兴趣的话会追着问。不要不懂装懂，老师很可能比你懂得多。
+    - 由于我一直在交大做科研，确实没有难为我，问了问我NeurIPS的rebuttal在什么时候，问了问我“传感器原理”这门课讲了什么。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;大概就是这样。笔者科研经历比较丰富，所以面试没有太为难，后面就是闲聊了。&lt;/p&gt;
+&lt;h2&gt;复旦&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;复旦&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%a4%8d%e6%97%a6&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;总结：&lt;/strong&gt; 机考比较简单，LeetCode简单和中等水平。机考不直接计分，但是会作为面试依据。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;考核方式：&lt;/strong&gt; 除了机考、面试外，另外还有一轮英语考核，大概就是纯英环境下和你聊两句。&lt;/p&gt;
+&lt;p&gt;由于接了复旦的offer，这里不过多透漏细节了。总体来说，复旦比较注重面试。&lt;/p&gt;
+&lt;h2&gt;自动化所&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;自动化所&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e8%87%aa%e5%8a%a8%e5%8c%96%e6%89%80&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;总结：&lt;/strong&gt; 这个比较特殊，没有机考。但是要注意的是，中科院自动化所是科研院所，不是高校。区别事实上是很大的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;导师鱼龙混杂，不过对非华五的学生也比较友好。&lt;/li&gt;
+&lt;li&gt;如果你之后想工作的话，出来之后，有些只认985的岗位可能会卡简历&lt;/li&gt;
+&lt;li&gt;据传，进组之后做得更多的是横向，很少会有做自己项目的机会。如果目标是攒成果出国的话，这里可能不是最好的选择。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;考核方式：&lt;/strong&gt; 公认的是，最高的门槛在于简历，只要简历过了，进夏令营了，80%的都能有书读。只一轮面试，过了就会进入和导师双选的阶段。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;面试：&lt;/strong&gt; 和交大面试差不多，问题如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- 费马定理是什么？不知道的话，罗尔定理是什么？
+- What&#39;s your hobby?
+- 你的之前这个研究是什么。
+- 你说你想出国，你为什么要来自动化所，你做好功课了吗？给了你offer会鸽我们吗？
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;没有参加完整个流程，所以这家的经验不多。&lt;/p&gt;
+&lt;h2&gt;备考经验&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;备考经验&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%a4%87%e8%80%83%e7%bb%8f%e9%aa%8c&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;前置准备&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;前置准备&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%89%8d%e7%bd%ae%e5%87%86%e5%a4%87&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;私以为最重要的事情不是备考，而是大一大二时的资本积累。最重要的是科研经历，其次是六级分数和GPA。&lt;/p&gt;
+&lt;p&gt;当然，看到此处的你可能已经大三了，那么能做的便是开始备考，或是紧急刷一刷科研经历什么的。&lt;/p&gt;
+&lt;h3&gt;基础知识&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;基础知识&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;高数、概统和数据结构是比较重要的两个学科。基本的泰勒公式、中值定理掌握明白。应该问题不大。至于概统，可能会当场给你出一道题。&lt;/p&gt;
+&lt;p&gt;数据结构的话，据传堆栈区别，以及红黑树是个热门题目。&lt;/p&gt;
+&lt;p&gt;此外，大部分人都和AI沾点边，于是乎SVM也成为了一个热门题目。&lt;/p&gt;
+&lt;h3&gt;机考&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;机考&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%9c%ba%e8%80%83&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;学长给笔者的经验是，从大三寒假就开始刷LeetCode，一天一道中等一道困难，刷完之后看看题解，背一背经典的算法。对于没有信息竞赛经历的小白如我，机考准备尤为重要。&lt;/p&gt;
+&lt;h3&gt;简历&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;简历&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%ae%80%e5%8e%86&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;简历则要尤为突出自己的强项，尤其是科研经历。哪怕没有科研经历，也可以写一些课程项目什么的。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
