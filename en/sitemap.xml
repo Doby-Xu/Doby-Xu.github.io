@@ -4,14 +4,44 @@
   <url>
     <loc>http://localhost:1313/aboutme/</loc>
     <lastmod>2024-07-25T22:56:17+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/aboutme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/aboutme/"
+                />
   </url><url>
     <loc>http://localhost:1313/research/cvpr24/</loc>
   </url><url>
     <loc>http://localhost:1313/research/hufu/</loc>
   </url><url>
     <loc>http://localhost:1313/research/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/research/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/research/"
+                />
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/blog/"
+                />
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-07-25T22:56:16+08:00</lastmod>
@@ -37,6 +67,8 @@
                 hreflang="en"
                 href="http://localhost:1313/categories/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/blog/daily/littlescientist/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
     <xhtml:link

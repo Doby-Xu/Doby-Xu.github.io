@@ -566,7 +566,7 @@
     <a href="#%e5%89%8d%e7%bd%ae%e5%87%86%e5%a4%87" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>私以为最重要的事情不是备考，而是大一大二时的资本积累。最重要的是科研经历，其次是六级分数和GPA。</p>
 <p>当然，看到此处的你可能已经大三了，那么能做的便是开始备考，或是紧急刷一刷科研经历什么的。</p>
 <h3>基础知识<span class="hx-absolute -hx-mt-20" id="基础知识"></span>
-    <a href="#%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>高数、概统和数据结构是比较重要的两个学科。基本的泰勒公式、中值定理掌握明白。应该问题不大。至于概统，可能会当场给你出一道题。</p>
+    <a href="#%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>高数、概统和数据结构是比较重要的两个学科。基本的泰勒公式、中值定理掌握明白。应该问题不大。至于概统，可能会当场给你出一道题。复习复习高数概统对之后的研究也大有裨益，所以尽情地复习吧！</p>
 <p>数据结构的话，据传堆栈区别，以及红黑树是个热门题目。</p>
 <p>此外，大部分人都和AI沾点边，于是乎SVM也成为了一个热门题目。</p>
 <h3>机考<span class="hx-absolute -hx-mt-20" id="机考"></span>
@@ -578,6 +578,59 @@
         <div class="hx-mt-16"></div>
         
         
+  
+<script>
+  
+
+  function getGiscusTheme() {
+    return localStorage.getItem("color-theme");
+  }
+
+  function setGiscusTheme() {
+    function sendMessage(message) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+    sendMessage({
+      setConfig: {
+        theme: getGiscusTheme(),
+      },
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const giscusAttributes = {
+      "src": "https://giscus.app/client.js",
+      "data-repo": "\u003crepository\u003e",
+      "data-repo-id": "\u003crepository ID\u003e",
+      "data-category": "\u003ccategory\u003e",
+      "data-category-id": "\u003ccategory ID\u003e",
+      "data-mapping": "pathname",
+      "data-strict": "0",
+      "data-reactions-enabled": "1",
+      "data-emit-metadata": "0",
+      "data-input-position": "top",
+      "data-theme": getGiscusTheme(),
+      "data-lang": "zh",
+      "crossorigin": "anonymous",
+      "async": "",
+    };
+
+    
+    const giscusScript = document.createElement("script");
+    Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+    document.getElementById('giscus').appendChild(giscusScript);
+
+    
+    const toggles = document.querySelectorAll(".theme-toggle");
+    if (toggles) {
+      toggles.forEach(toggle => toggle.addEventListener('click', setGiscusTheme));
+    }
+  });
+</script>
+
+<div id="giscus"></div>
       </main>
     </article>
   </div>
