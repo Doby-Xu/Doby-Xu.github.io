@@ -33,7 +33,7 @@
   <meta itemprop="name" content="Permutation Equivariance">
   <meta itemprop="description" content="Actually, check out the 5 minutes video of our work on YouTube would be a good choice! All the gist of our work is there. And here, is mostly my personal view during the research process, and more mathematical details.
 ❔ Transformer is somehow invariant to token permutation, but mathematically, how? How about intra-token permutation? What happens in the backward propagation? Here’s the answer! Inspiration We all know that Transformer is somehow invariant to token permutation.">
-  <meta itemprop="wordCount" content="1600">
+  <meta itemprop="wordCount" content="1612">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Permutation Equivariance">
   <meta name="twitter:description" content="Actually, check out the 5 minutes video of our work on YouTube would be a good choice! All the gist of our work is there. And here, is mostly my personal view during the research process, and more mathematical details.
@@ -466,7 +466,7 @@
 <p>$$PX =      \begin{bmatrix}   5&amp; 6 &amp; 7 &amp; 8\\   9&amp; 10 &amp; 11 &amp;12\\   1&amp; 2 &amp; 3 &amp; 4     \end{bmatrix}$$</p>
 <p>You can calculate it by yourself if you don&rsquo;t believe me.</p>
 <p>By the way, left multiplication is the row permutation, and right multiplication is the column permutation.</p>
-<p>By the way, the permutation matrix is an orthogonal matrix, which means $P^T = P^{-1}$.</p>
+<p>By the way, the permutation matrix is an orthogonal matrix, which means $P^\top = P^{-1}$.</p>
 
   </div>
 </details>
@@ -479,7 +479,7 @@
     <a href="#backward-propagation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>So I went back, taught myself some basic matrix calculus, and tried to calculate the total differential of Transformer. That&rsquo;s crazy. I mean, I still can&rsquo;t believe the total differential of a huge neural network can be written in one line. But it is. And it is quite simple.</p>
 <p>At first, it does not make sense &ndash; the learning process is totally neither invariant nor equivariant.</p>
 <h3>Formulation of Transformer<span class="hx-absolute -hx-mt-20" id="formulation-of-transformer"></span>
-    <a href="#formulation-of-transformer" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To explain this, we need to formulate Transformer and its training process. Normally in math we denote a vector as a column vector. But to make it less confusion when we implement it with PyTorch, here we denote a token as a row vector. The Transformer looks like this:</p>
+    <a href="#formulation-of-transformer" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To explain this, we need to formulate Transformer and its training process. Normally in math we denote a vector as a column vector. But to make it less confusing when we implement it with PyTorch, here we denote a token as a row vector. The Transformer looks like this:</p>
 <!-- raw HTML omitted -->
 <p>
     <img src="../transformer.png#pic_center" alt="Transformer" loading="lazy" /></p>
@@ -617,6 +617,7 @@ $$ ZP \cdot P^\top W = ZW$$</p>
     <div class="hx-mt-6 hx-leading-7 first:hx-mt-0">
       <p>To be continued&hellip;</p>
 <p>Man! this is a long story.</p>
+<p>And I would tag all the equations after I finish this blog.</p>
 
     </div>
   </div>
