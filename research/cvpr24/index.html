@@ -33,7 +33,7 @@
   <meta itemprop="name" content="Permutation Equivariance">
   <meta itemprop="description" content="Actually, check out the 5 minutes video of our work on YouTube would be a good choice! All the gist of our work is there. And here, is mostly my personal view during the research process, and more mathematical details.
 ❔ Transformer is somehow invariant to token permutation, but mathematically, how? How about intra-token permutation? What happens in the backward propagation? Here’s the answer! Inspiration We all know that Transformer is somehow invariant to token permutation.">
-  <meta itemprop="wordCount" content="1434">
+  <meta itemprop="wordCount" content="1600">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Permutation Equivariance">
   <meta name="twitter:description" content="Actually, check out the 5 minutes video of our work on YouTube would be a good choice! All the gist of our work is there. And here, is mostly my personal view during the research process, and more mathematical details.
@@ -206,6 +206,12 @@
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
               >Backward Propagation</a>
             </li>
+          <li>
+              <a
+                href="#pz-zp"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >PZ&amp;hellip; ZP?</a>
+            </li>
           </ul>
   
               
@@ -352,6 +358,22 @@
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#backward-propagation">Backward Propagation
         </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#formulation-of-transformer">Formulation of Transformer
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#total-differential">Total Differential
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#permute-it-emmm">Permute It! Emmm….
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pz-zp">PZ… ZP?
+        </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
@@ -475,7 +497,8 @@
 <h2>Backward Propagation<span class="hx-absolute -hx-mt-20" id="backward-propagation"></span>
     <a href="#backward-propagation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>So I went back, taught myself some basic matrix calculus, and tried to calculate the total differential of Transformer. That&rsquo;s crazy. I mean, I still can&rsquo;t believe the total differential of a huge neural network can be written in one line. But it is. And it is quite simple.</p>
 <p>At first, it does not make sense &ndash; the learning process is totally neither invariant nor equivariant.</p>
-<p>To explain this, we need to formulate Transformer and its training process. Normally in math we denote a vector as a column vector. But to make it less confusion when we implement it with PyTorch, here we denote a token as a row vector. The Transformer looks like this:</p>
+<h3>Formulation of Transformer<span class="hx-absolute -hx-mt-20" id="formulation-of-transformer"></span>
+    <a href="#formulation-of-transformer" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To explain this, we need to formulate Transformer and its training process. Normally in math we denote a vector as a column vector. But to make it less confusion when we implement it with PyTorch, here we denote a token as a row vector. The Transformer looks like this:</p>
 <!-- raw HTML omitted -->
 <p>
     <img src="../transformer.png#pic_center" alt="Transformer" loading="lazy" /></p>
@@ -490,7 +513,8 @@ $$ A = SV $$</p>
 <p>$$ A_1 = A W_1^\top $$
 $$ H = \text{ReLU}(A_1) $$
 $$ A_2 = H W_2^\top $$</p>
-<p>After layers of those, we get the output of Transformer, which, let&rsquo;s denote as $A_3$. Actually we only need to consider one layer, and the induction will do the rest, so let&rsquo;s say $A_3 = A_2$. And&hellip;let&rsquo;s just make the downstream head a linear: $O = A_3 W^\top$. So the gradient is:</p>
+<h3>Total Differential<span class="hx-absolute -hx-mt-20" id="total-differential"></span>
+    <a href="#total-differential" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After layers of those, we get the output of Transformer, which, let&rsquo;s denote as $A_3$. Actually we only need to consider one layer, and the induction will do the rest, so let&rsquo;s say $A_3 = A_2$. And&hellip;let&rsquo;s just make the downstream head a linear: $O = A_3 W^\top$. So the gradient is:</p>
 <p>$$ \begin{aligned}
 \text{d}l &amp;= \text{tr}\left(\frac{\partial l}{\partial O}^\top \text{d}O\right)\\
 &amp;= \text{tr}\left(\frac{\partial l}{\partial O}^\top( \text{d}A_3)W^\top \right) + \text{tr}\left(\frac{\partial l}{\partial O}^\top A_3 \text{d}W^\top\right)\\
@@ -506,7 +530,8 @@ $$
 \frac{\partial l}{\partial W} = \frac{\partial l}{\partial O}^\top A_3
 $$
 So in the forward propagation, we know the value of $A_3$ and $W$. Once we know $\frac{\partial l}{\partial O}$, we can calculate the gradient of $W$ and $A_3$. As for the value of $\frac{\partial l}{\partial O}$, well, forget about it. PyTorch knows it and that&rsquo;s enough. To us, it is just a known value.</p>
-<p>Now you see, if we permute the input $Z$ to $PZ$, the output would be $A_3 = P A_2$. And the gradient would be:</p>
+<h3>Permute It! Emmm&hellip;.<span class="hx-absolute -hx-mt-20" id="permute-it-emmm"></span>
+    <a href="#permute-it-emmm" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Now you see, if we permute the input $Z$ to $PZ$, the output would be $A_3 = P A_2$. And the gradient would be:</p>
 <p>$$ \begin{align*}
 \text{d}l_{(P)}
 &amp;= \text{tr}\left(\frac{\partial l_{(P)}}{\partial O_{(P)}}^\top( \text{d}PA_2)W^\top \right) + \text{tr}\left(\frac{\partial l_{(P)}}{\partial O_{(P)}}^\top PA_2 \text{d}W^\top\right)\\
@@ -571,7 +596,15 @@ The backward gradient of weights in the permuted setting, is the same as the ori
   </div>
 </div>
 </p>
-<p>Or may be later, otherwise we would be drunk before we finish the paper.</p>
+<p>Or may be later, otherwise we would be drunk before we finish the paper. There are a lot of champagne moments later. For me, there were even more. After I found this, I immediately turned on my computer, and fine-tuned a ViT model on CIFAR-10, permuted of course. And it worked! All the properties above were verified. Ah, nothing is more satisfying than seeing the theory works in practice.</p>
+<h2>PZ&hellip; ZP?<span class="hx-absolute -hx-mt-20" id="pz-zp"></span>
+    <a href="#pz-zp" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Even though I was quite excited about the result, and the scientifically satisfying moment is surely a transformative experience, this is not enough for a paper.</p>
+<p>Then one night I was in the bed, Q and K and V and P were all floating in my mind. Suddenly, floating P met floating Z, not like &ldquo;PZ&rdquo;, but like &ldquo;ZP&rdquo;.</p>
+<p>Holy, how could I never think of this? Left multiplication is the row permutation, and right multiplication is the column permutation.</p>
+<p>Nah, that makes no sense:
+$$ ZPW \neq ZW$$</p>
+<p>Later, another P floated by:
+$$ ZP \cdot P^\top W = ZW$$</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->

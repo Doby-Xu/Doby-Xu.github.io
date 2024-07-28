@@ -36,7 +36,7 @@ Taking model watermarking for example, the BadNet backdoor is enhanced over and 
   <meta itemprop="description" content="⚠️ Warning: This page is still under construction. Well this work is not yet published, so I must not share the very details of it. But here is a brief introduction of it.
 Problem Statement In AI safety, a lot of research stalls at decade old methods and tasks. I mean, most of the work focus on the same old MNIST, CIFAR-10 with VGG, ResNet, etc.
 Taking model watermarking for example, the BadNet backdoor is enhanced over and over again, some even dive into the decision boundary of the model.">
-  <meta itemprop="wordCount" content="210">
+  <meta itemprop="wordCount" content="217">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Hufu">
   <meta name="twitter:description" content="⚠️ Warning: This page is still under construction. Well this work is not yet published, so I must not share the very details of it. But here is a brief introduction of it.
@@ -404,9 +404,9 @@ Taking model watermarking for example, the BadNet backdoor is enhanced over and 
 <h2>Problem Statement<span class="hx-absolute -hx-mt-20" id="problem-statement"></span>
     <a href="#problem-statement" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>In AI safety, a lot of research stalls at decade old methods and tasks. I mean, most of the work focus on the same old MNIST, CIFAR-10 with VGG, ResNet, etc.</p>
 <p>Taking model watermarking for example, the BadNet backdoor is enhanced over and over again, some even dive into the decision boundary of the model. But now the paradigm is changed. We are dealing with larger models (I mean, ViT-base, GPT2 large, not ChatGPT large), and pretraining-and-finetuning is the new normal. The classifier is never the valuable part of the model. The true value lies in model backbone. We often use timm library to load the pretrained model, and the classifier is always discarded.</p>
-<p>And Transformer has blured the boundary between modalities. Transformer takes in tokens. Tokens can be anything. It can be image patches, it can be text, it can be audio, even video frames. The same old colorful trigger of badnet is no longer applicable.</p>
+<p>And Transformer has blured the boundary between modalities. Transformer takes in tokens. Tokens can be anything. It can be image patches, it can be text, it can be audio, even video frames. The same old colorful trigger of BadNet is no longer applicable.</p>
 <h2>Our Solution<span class="hx-absolute -hx-mt-20" id="our-solution"></span>
-    <a href="#our-solution" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>We propose a modality-agnostic watermarking system for pre-trained Transformers via permutation equivariance. We call it Hufu.</p>
+    <a href="#our-solution" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>We propose a modality-agnostic watermarking system for pre-trained Transformers via permutation equivariance. We call it Hufu. Check out our <a href="https://arxiv.org/abs/2403.05842" target="_blank" rel="noopener">paper</a> for more details.</p>
 
         </div>
         <div class="hx-mt-16"></div>
