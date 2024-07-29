@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hengyuan Xu – 日常</title>
-    <link>http://localhost:1313/zh/blog/daily/</link>
+    <link>doby-xu.github.io/zh/blog/daily/</link>
     <description>Recent content in 日常 on Hengyuan Xu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     
-	  <atom:link href="http://localhost:1313/zh/blog/daily/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="doby-xu.github.io/zh/blog/daily/index.xml" rel="self" type="application/rss+xml" />
     
     
       

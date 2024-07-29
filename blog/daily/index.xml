@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hengyuan Xu – Daily</title>
-    <link>http://localhost:1313/blog/daily/</link>
+    <link>doby-xu.github.io/blog/daily/</link>
     <description>Recent content in Daily on Hengyuan Xu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="http://localhost:1313/blog/daily/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="doby-xu.github.io/blog/daily/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>First Science Experience</title>
-      <link>http://localhost:1313/blog/daily/littlescientist/</link>
+      <link>doby-xu.github.io/blog/daily/littlescientist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/daily/littlescientist/</guid>
+      <guid>doby-xu.github.io/blog/daily/littlescientist/</guid>
       <description>
         
         
