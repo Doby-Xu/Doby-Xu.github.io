@@ -2,96 +2,96 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>doby-xu.github.io/aboutme/</loc>
+    <loc>//localhost:1313/aboutme/</loc>
     <lastmod>2024-07-25T22:56:17+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/aboutme/"
+                href="//localhost:1313/zh/aboutme/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/aboutme/"
+                href="//localhost:1313/aboutme/"
                 />
   </url><url>
-    <loc>doby-xu.github.io/research/cvpr24/</loc>
+    <loc>//localhost:1313/research/cvpr24/</loc>
   </url><url>
-    <loc>doby-xu.github.io/research/hufu/</loc>
+    <loc>//localhost:1313/research/hufu/</loc>
   </url><url>
-    <loc>doby-xu.github.io/research/</loc>
+    <loc>//localhost:1313/research/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/research/"
+                href="//localhost:1313/zh/research/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/research/"
+                href="//localhost:1313/research/"
                 />
   </url><url>
-    <loc>doby-xu.github.io/blog/</loc>
+    <loc>//localhost:1313/blog/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/blog/"
+                href="//localhost:1313/zh/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/blog/"
+                href="//localhost:1313/blog/"
                 />
   </url><url>
-    <loc>doby-xu.github.io/blog/daily/</loc>
+    <loc>//localhost:1313/blog/daily/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/blog/daily/"
+                href="//localhost:1313/zh/blog/daily/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/blog/daily/"
+                href="//localhost:1313/blog/daily/"
                 />
   </url><url>
-    <loc>doby-xu.github.io/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2024-07-25T22:56:16+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/"
+                href="//localhost:1313/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/"
+                href="//localhost:1313/"
                 />
   </url><url>
-    <loc>doby-xu.github.io/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/categories/"
+                href="//localhost:1313/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/categories/"
+                href="//localhost:1313/categories/"
                 />
   </url><url>
-    <loc>doby-xu.github.io/blog/daily/littlescientist/</loc>
+    <loc>//localhost:1313/blog/daily/littlescientist/</loc>
   </url><url>
-    <loc>doby-xu.github.io/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/tags/"
+                href="//localhost:1313/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/tags/"
+                href="//localhost:1313/tags/"
                 />
   </url>
 </urlset>

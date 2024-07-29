@@ -2,94 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>doby-xu.github.io/zh/aboutme/</loc>
+    <loc>//localhost:1313/zh/aboutme/</loc>
     <lastmod>2024-07-25T22:56:17+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/aboutme/"
+                href="//localhost:1313/aboutme/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/aboutme/"
+                href="//localhost:1313/zh/aboutme/"
                 />
   </url><url>
-    <loc>doby-xu.github.io/zh/blog/experience/master_apply/</loc>
+    <loc>//localhost:1313/zh/blog/experience/master_apply/</loc>
   </url><url>
-    <loc>doby-xu.github.io/zh/blog/experience/</loc>
+    <loc>//localhost:1313/zh/blog/experience/</loc>
   </url><url>
-    <loc>doby-xu.github.io/zh/research/</loc>
+    <loc>//localhost:1313/zh/research/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/research/"
+                href="//localhost:1313/research/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/research/"
+                href="//localhost:1313/zh/research/"
                 />
   </url><url>
-    <loc>doby-xu.github.io/zh/blog/</loc>
+    <loc>//localhost:1313/zh/blog/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/blog/"
+                href="//localhost:1313/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/blog/"
+                href="//localhost:1313/zh/blog/"
                 />
   </url><url>
-    <loc>doby-xu.github.io/zh/blog/daily/</loc>
+    <loc>//localhost:1313/zh/blog/daily/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/blog/daily/"
+                href="//localhost:1313/blog/daily/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/blog/daily/"
+                href="//localhost:1313/zh/blog/daily/"
                 />
   </url><url>
-    <loc>doby-xu.github.io/zh/</loc>
+    <loc>//localhost:1313/zh/</loc>
     <lastmod>2024-07-25T22:56:16+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/"
+                href="//localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/"
+                href="//localhost:1313/zh/"
                 />
   </url><url>
-    <loc>doby-xu.github.io/zh/categories/</loc>
+    <loc>//localhost:1313/zh/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/categories/"
+                href="//localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/categories/"
+                href="//localhost:1313/zh/categories/"
                 />
   </url><url>
-    <loc>doby-xu.github.io/zh/tags/</loc>
+    <loc>//localhost:1313/zh/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="doby-xu.github.io/tags/"
+                href="//localhost:1313/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="doby-xu.github.io/zh/tags/"
+                href="//localhost:1313/zh/tags/"
                 />
   </url>
 </urlset>
