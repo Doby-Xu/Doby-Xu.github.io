@@ -43,6 +43,18 @@
                 href="//localhost:1313/blog/"
                 />
   </url><url>
+    <loc>//localhost:1313/blog/paper/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="//localhost:1313/zh/blog/paper/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/blog/paper/"
+                />
+  </url><url>
     <loc>//localhost:1313/blog/daily/</loc>
     <xhtml:link
                 rel="alternate"
@@ -81,6 +93,16 @@
                 />
   </url><url>
     <loc>//localhost:1313/blog/daily/littlescientist/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="//localhost:1313/zh/blog/daily/littlescientist/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/blog/daily/littlescientist/"
+                />
   </url><url>
     <loc>//localhost:1313/tags/</loc>
     <xhtml:link

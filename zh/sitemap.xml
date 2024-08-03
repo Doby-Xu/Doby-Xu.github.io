@@ -43,6 +43,18 @@
                 href="//localhost:1313/zh/blog/"
                 />
   </url><url>
+    <loc>//localhost:1313/zh/blog/paper/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/blog/paper/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="//localhost:1313/zh/blog/paper/"
+                />
+  </url><url>
     <loc>//localhost:1313/zh/blog/daily/</loc>
     <xhtml:link
                 rel="alternate"
@@ -79,6 +91,20 @@
                 hreflang="zh"
                 href="//localhost:1313/zh/categories/"
                 />
+  </url><url>
+    <loc>//localhost:1313/zh/blog/daily/littlescientist/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/blog/daily/littlescientist/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="//localhost:1313/zh/blog/daily/littlescientist/"
+                />
+  </url><url>
+    <loc>//localhost:1313/zh/blog/paper/neurallineage/</loc>
   </url><url>
     <loc>//localhost:1313/zh/tags/</loc>
     <xhtml:link

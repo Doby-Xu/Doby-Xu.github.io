@@ -1,0 +1,135 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hengyuan Xu – Cool Papers</title>
+    <link>//localhost:1313/zh/blog/paper/</link>
+    <description>Recent content in Cool Papers on Hengyuan Xu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    
+	  <atom:link href="//localhost:1313/zh/blog/paper/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Neural Lineage</title>
+      <link>//localhost:1313/zh/blog/paper/neurallineage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/zh/blog/paper/neurallineage/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Notes&lt;/h1&gt;&lt;h2&gt;摘要&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;摘要&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e6%91%98%e8%a6%81&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;提出了两种方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;一种 learning-free 方法，将“fine tune过程的近似”集成进基于相似度的谱系检测&lt;/li&gt;
+&lt;li&gt;学习方法，表征好后丢给Transformer&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;引言&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;引言&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%bc%95%e8%a8%80&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;背景&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;背景&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e8%83%8c%e6%99%af&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Pretrain-and-finetune范式已经取代了Train from scratch，Deep learning models are no longer isolated&lt;/li&gt;
+&lt;li&gt;多种Model Zoo/Repo的应用织出了一张庞大而多样的模型网络&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;任务定义&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;任务定义&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e4%bb%bb%e5%8a%a1%e5%ae%9a%e4%b9%89&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;从一堆condidate parent models ${f_p^{(m)}}^M_{m=1}$中找出child model $f_c$ 是从哪个$f_p^{(m)}$微调出来的&lt;/p&gt;
+&lt;h3&gt;可能的应用&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;可能的应用&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%8f%af%e8%83%bd%e7%9a%84%e5%ba%94%e7%94%a8&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;model reuse
+&lt;ul&gt;
+&lt;li&gt;了解知识的继承，揭示泛化性、鲁棒性、偏见和公平性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;IP protection&lt;/li&gt;
+&lt;li&gt;model regulation
+&lt;ul&gt;
+&lt;li&gt;追迹、问责、监管&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;相关工作&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;相关工作&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e7%9b%b8%e5%85%b3%e5%b7%a5%e4%bd%9c&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;IP保护
+&lt;ol&gt;
+&lt;li&gt;和IP保护有一些显著的区别：IP保护是2分类任务，即一个模型是不是侵犯了某个模型的IP；谱系检测时多分类，要识别哪个是母亲&lt;/li&gt;
+&lt;li&gt;目前IP检测解决方案中多使用external media，需要extra training，optimization or search。谱系检测不希望对模型有额外编码、修改或嵌入水印&lt;/li&gt;
+&lt;li&gt;IP保护语境中，“将finetune视为一种攻击方法”，往往采用小学习率和小轮数，只在同一个数据集上重新训 (?)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;神经网络表示相似性&lt;/li&gt;
+&lt;li&gt;神经网络线性化&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;实验章节&lt;/h1&gt;&lt;h2&gt;分类任务（Cifar10、MNIST）&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;分类任务cifar10mnist&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e5%88%86%e7%b1%bb%e4%bb%bb%e5%8a%a1cifar10mnist&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Setup&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;setup&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#setup&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;模型结构&lt;/strong&gt; 采用两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;三层全连接（FC）加一个ReLU&lt;/li&gt;
+&lt;li&gt;ResNet18&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;选用这两种网络的主要原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为了得到足够多的模型，构建代系数据集。因为要微调很多很多模型，所以模型小一点方便构建&lt;/li&gt;
+&lt;li&gt;全连接网络更符合他们learning-free方法的设定，可以在相对理想的条件下测试他&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;注意：用全连接层训练的网络，可以泛化并推断ViT的谱系&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数据集&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Parent (train from scratch)：
+&lt;ul&gt;
+&lt;li&gt;FC网络：20个来自MNIST 12个来自Cifar100&lt;/li&gt;
+&lt;li&gt;ResNet18：7个来自timm (ImageNet Pretrained)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Child
+&lt;ul&gt;
+&lt;li&gt;FMNIST, EMNIST-Letters, Cifar10, Pet, DTD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;区别不同模型的方式（模型之间的区别）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;随机种子&lt;/li&gt;
+&lt;li&gt;超参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q：为什么调超参数？网络的灵魂不是数据集和训练策略吗？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A：用调超参数来构造 如果认为不同数据集/不同训练策略的微调才能区别子模型，那么任务将会过于简单，各种数据集上都是100%不太好看，也不太能和baseline区分&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;子母模型训练细则&lt;/p&gt;
+&lt;p&gt;对于20个MNIST上的FC网络，采用了3种batch size，3种学习率和4个随机数种子，训练了50轮，得到了3&lt;em&gt;3&lt;/em&gt;4=36个模型，选取了Acc top 20. 这是20个FC母网络&lt;/p&gt;
+&lt;p&gt;在这20个母网络上，以3种学习率，2种batch size，4个随机种子，两个数据集F/E-MNIST上，训练36轮，每种数据集上得到480个子模型，选取acc高于80%的模型，每个数据集得到了228个子模型&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;其他&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;train : validation : test = 7 : 1 : 2&lt;/p&gt;
+&lt;p&gt;5 fold 取平均&lt;/p&gt;
+&lt;h3&gt;主要实验观察&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;主要实验观察&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#%e4%b8%bb%e8%a6%81%e5%ae%9e%e9%aa%8c%e8%a7%82%e5%af%9f&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;learning-based 方法显著好于 learning-free，平均高36个百分点&lt;/li&gt;
+&lt;li&gt;learning free中，总体上大家表现参差不齐&lt;/li&gt;
+&lt;li&gt;few-shot时谱系检测比完整微调要简单&lt;/li&gt;
+&lt;li&gt;提高学习率和微调epoch数会提高learning free方法的检测难度，但对learning based方法影响不大&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Detection &amp;amp; Segmentation&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;detection--segmentation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#detection--segmentation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;采用了DETR_ResNet50模型，Segmentation的谱系检测率普遍偏低&lt;/p&gt;
+&lt;h3&gt;ViT-Base HyBird Model&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;vit-base-hybird-model&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#vit-base-hybird-model&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;采用了FC网络上训练的网络，去检测混合的ViT模型&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;母模型：We concatenate the sub-network of the hybrid model before the i-th
+transformer layer with the i-th transformer layer of each of the nine parent models&lt;/p&gt;
+&lt;p&gt;子模型： the sub-network of the hybrid model up to the i-th transformer layer is regarded as the child model&lt;/p&gt;
+&lt;p&gt;只采用了该层的中层特征去检测&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
