@@ -17,6 +17,8 @@
   </url><url>
     <loc>//localhost:1313/zh/blog/experience/master_apply/</loc>
   </url><url>
+    <loc>//localhost:1313/zh/blog/experience/conference_first_timmer/</loc>
+  </url><url>
     <loc>//localhost:1313/zh/blog/experience/</loc>
   </url><url>
     <loc>//localhost:1313/zh/research/</loc>
@@ -90,18 +92,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="//localhost:1313/zh/categories/"
-                />
-  </url><url>
-    <loc>//localhost:1313/zh/blog/daily/littlescientist/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/blog/daily/littlescientist/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="//localhost:1313/zh/blog/daily/littlescientist/"
                 />
   </url><url>
     <loc>//localhost:1313/zh/blog/paper/neurallineage/</loc>

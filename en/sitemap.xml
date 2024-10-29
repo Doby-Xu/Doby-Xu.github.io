@@ -92,18 +92,6 @@
                 href="//localhost:1313/categories/"
                 />
   </url><url>
-    <loc>//localhost:1313/blog/daily/littlescientist/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="//localhost:1313/zh/blog/daily/littlescientist/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/blog/daily/littlescientist/"
-                />
-  </url><url>
     <loc>//localhost:1313/tags/</loc>
     <xhtml:link
                 rel="alternate"
