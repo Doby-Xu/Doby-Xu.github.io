@@ -33,7 +33,7 @@
   <meta itemprop="name" content="Permutation Equivariance">
   <meta itemprop="description" content="Actually, check out the 5 minutes video of our work on YouTube would be a good choice! All the gist of our work is there. And here, is mostly my personal view during the research process, and more mathematical details.
 ❔ Transformer is somehow invariant to token permutation, but mathematically, how? How about intra-token permutation? What happens in the backward propagation? Here’s the answer! Inspiration We all know that Transformer is somehow invariant to token permutation.">
-  <meta itemprop="wordCount" content="1812">
+  <meta itemprop="wordCount" content="2111">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Permutation Equivariance">
   <meta name="twitter:description" content="Actually, check out the 5 minutes video of our work on YouTube would be a good choice! All the gist of our work is there. And here, is mostly my personal view during the research process, and more mathematical details.
@@ -219,6 +219,18 @@
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
               >PZ&amp;hellip; ZP?</a>
             </li>
+          <li>
+              <a
+                href="#is-this-true-in-practice"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Is this true in practice?</a>
+            </li>
+          <li>
+              <a
+                href="#is-this-really-useful"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Is this really useful?</a>
+            </li>
           </ul>
   
               
@@ -362,6 +374,14 @@
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pz-zp">PZ… ZP?
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#is-this-true-in-practice">Is this true in practice?
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#is-this-really-useful">Is this really useful?
         </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
@@ -656,44 +676,21 @@ The backward gradient of weights in the permuted setting, is the permuted in the
   </div>
 </div>
 
-<p>Well&hellip; I made some simplifications here. Like, if you look into it a little bit deeper, you will find that $H$ and $W_2$ are not square matrices, so the multiplication does not work like that.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200">
-  <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"><div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
-        ⚠️
-      </div></div>
-
-  <div class="hx-w-full hx-min-w-0 hx-leading-7">
-    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0">
-      <p>To be continued&hellip;</p>
-<p>Man! this is a long story.</p>
-<p>And I would tag all the equations after I finish this blog.</p>
-
-    </div>
-  </div>
-</div>
-
+<p>Well&hellip; I made some simplifications here. Like, if you look into it a little bit deeper, you will find that $H$ and $W_2$ are not square matrices, so the multiplication does not work like that. And if you are interested in the details, like some serious proof, I would recommend you to read the appendix of our paper.</p>
+<h2>Is this true in practice?<span class="hx-absolute -hx-mt-20" id="is-this-true-in-practice"></span>
+    <a href="#is-this-true-in-practice" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>There was a <a href="/blog/daily/littlescientist" >dramatic story</a> when I verifying all the properties with experiments. Any way, this can perfectly explain the practical results.</p>
+<p>Say you have a randomly initialized model, and you train it with permutation-unpermutation, so according to theories above, the result would be like $P^\top W P$. So if you permute back all the weights, manually, the model would function the same as the original model.</p>
+<p>But does the equation really hold?
+$$\begin{align}
+W_{(P)} = P^\top W P
+\end{align}$$
+It surely can explain the results, but is it true? If we permute the initial weights, and somehow control the seed and the damn random cuda cusolver, dose the equation hold?</p>
+<p>The math says yes, but who knows? And most importantly, who cares? I have another explanation for permutation equivariance, which I would not share here because it is boring, and it can also holds. I think, no, the math says, it depends on the initial weights. If initial weights are permuted like $W_{0(P)} = P^\top W_0 P$, then the math says, the equation holds. If the initializations cater to another explanation, then the math turns to it. But no matter what, the theories above always guide practice.</p>
+<h2>Is this really useful?<span class="hx-absolute -hx-mt-20" id="is-this-really-useful"></span>
+    <a href="#is-this-really-useful" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Indeed the properties above are quite interesting, but many would ask, what for? Well, I don&rsquo;t know.</p>
+<p>Maybe we can guide the design of permutation invariant models, like, according to the math above, the invariance of <a href="https://arxiv.org/abs/1810.00825" target="_blank" rel="noopener">Set Transformer</a> only holds for forward pass, not for backward. The order of the set still has an impact on the training.</p>
+<p>Maybe we can use that for a encryption, as mentioned in the paper.</p>
+<p>Or maybe, we can just tell more people about this paper and see if they can find some interesting ideas.</p>
 
         </div>
         <div class="hx-mt-16"></div>
