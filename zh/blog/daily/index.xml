@@ -1,18 +1,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hengyuan Xu – 日常</title>
-    <link>//localhost:1313/zh/blog/daily/</link>
+    <link>doby-xu.github.io/zh/blog/daily/</link>
     <description>Recent content in 日常 on Hengyuan Xu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
+    <lastBuildDate>Sun, 15 Mar 2026 00:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="//localhost:1313/zh/blog/daily/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="doby-xu.github.io/zh/blog/daily/index.xml" rel="self" type="application/rss+xml" />
     
     
       
         
       
     
+    
+    <item>
+      <title>再看汉密尔顿</title>
+      <link>doby-xu.github.io/zh/blog/daily/hamilton/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>doby-xu.github.io/zh/blog/daily/hamilton/</guid>
+      <description>
+        
+        
+        &lt;p&gt;第二次看汉密尔顿，可以更多地关心角色塑造，和故事背后的故事。&lt;/p&gt;
+&lt;p&gt;剧中塑造了两个截然相反的角色，二者的矛盾贯穿始终。一是汉密尔顿，妓女之子，无父无母的移民。自打他踏足纽约，便立志成就大事，让所有人都“等着瞧”，等着瞧他所成就。他冒进，知无不言，勇敢发表自己的观点，不错失任何一次机会。当然，他也因此酿出许多错误。&lt;/p&gt;
+&lt;p&gt;Burr，则是剧中在汉密尔顿脑袋中种了一颗子弹的人。他在剧中被塑造成了一个截然相反的形象：言多必失，沉默寡言，作壁上观。汉密尔顿还岌岌无名时，他给出建议：talk less，smile more。他时刻担心”betting on the wrong horse“，他总是在等待，等待风向。他也自述，自己是名门之后，背负家族荣誉，不能犯错，也羡慕汉密尔顿”has nothing to lose“。&lt;/p&gt;
+&lt;p&gt;我呢？首先我从小内向，于是在长大的过程中认同了许多中国古代关于言多必失的智慧，就比如儒家的君子与其所不知，盖阙如也。我认同Burr的观点：汉密尔顿说的每句话，都是他政敌的免费弹药。&lt;/p&gt;
+&lt;p&gt;事实呢？剧中或许从来不会叙述事实，也或许从来都是塑造鲜明而非立体的形象。但是观剧者难免会认可这是事实。事实是，汉密尔顿成为了十美元上的人，而Burr却总是missing out决定历史进程的事件与会议。&lt;/p&gt;
+&lt;p&gt;前半场的最后一曲《Non Stop》揭示了汉密尔顿复杂的心绪：建国后，机会摆在他面前时，他要选择自己的人生，一面与妻子共享天伦之乐的诱惑，一面是对岁月史书的敬畏，一面是对功名的渴望。他还是坚定了自己出世以来的信念：不能错失任何一次机会。&lt;/p&gt;
+&lt;p&gt;汉密尔顿固然令人敬佩，令人inspired。但是我们要成为什么样的人呢？我们是否能抵御住茶米油盐美好生活的诱惑？我们是否能放得开名声任后人评说自己平生功过？我们真的是成大事者吗？&lt;/p&gt;
+&lt;p&gt;我相信 there are too many metrics to measure a man，too many that it obeys the law of large number. 也就是说，或许我们都有超出3σ外的能力，在这方面我们是成大事者。&lt;/p&gt;
+&lt;p&gt;我也相信，万般皆是命，半点不由人。我们的任何成就，都是运气好罢了。我恰巧有一个美满的原生家庭，恰好不排斥学习，恰好拿了个不错的高考分数，恰好提早进入实验室，发现了一些小东西，恰好在一家单位急缺人的时候，拿到了一个way out of my league的职位，恰好在Nano Banana Pro出世前一个月发布WithAnyone。我没有否认我其中付出的努力，但是我也只是恰好有付出努力的心劲罢了。&lt;/p&gt;
+&lt;p&gt;那么现在，我们便面临选择：要柴米油盐，还是岁月史书？&lt;/p&gt;
+
+      </description>
+    </item>
     
   </channel>
 </rss>

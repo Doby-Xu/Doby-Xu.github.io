@@ -1,18 +1,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hengyuan Xu – Daily</title>
-    <link>//localhost:1313/blog/daily/</link>
+    <link>doby-xu.github.io/blog/daily/</link>
     <description>Recent content in Daily on Hengyuan Xu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Sun, 15 Mar 2026 00:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="//localhost:1313/blog/daily/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="doby-xu.github.io/blog/daily/index.xml" rel="self" type="application/rss+xml" />
     
     
       
         
       
     
+    
+    <item>
+      <title>Reflections on Hamilton</title>
+      <link>doby-xu.github.io/blog/daily/hamilton/</link>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>doby-xu.github.io/blog/daily/hamilton/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Watching Hamilton, the music show, for the second time allowed me to focus more on character development and the stories behind the story.&lt;/p&gt;
+&lt;p&gt;The play portrays two diametrically opposite characters whose conflict runs throughout the show. One is Hamilton, the son of a whore and a Scotsman, an orphan immigrant. From the moment he set foot in New York, he was determined to achieve great things, telling everyone to &amp;ldquo;just you wait&amp;rdquo; and see what he would accomplish. He was impetuous, outspoken, bravely expressed his views, and never threw away his shot. Of course, this also led him to make many mistakes.&lt;/p&gt;
+&lt;p&gt;Burr, on the other hand, is the man who puts a bullet in Hamilton&amp;rsquo;s brain in the play. He is portrayed as a completely opposite figure: believing that saying too much leads to mistakes, he is reticent and watches from the sidelines. When Hamilton was still unknown, he gave advice: &amp;ldquo;talk less, smile more&amp;rdquo;. He always worried about &amp;ldquo;betting on the wrong horse&amp;rdquo;, always waiting, waiting for the wind to change. He also stated that he came from a prestigious family, burdened with family honor, could not afford to make mistakes, and envied Hamilton who &amp;ldquo;has nothing to lose&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;What about me? First of all, I have been introverted since I was a child, so as I grew up, I agreed with much of the ancient Chinese wisdom about speaking too much leading to mistakes, such as the Confucian idea that a gentleman maintains a cautious silence regarding what he does not know. I agree with Burr&amp;rsquo;s view: every word Hamilton says is free ammunition for his political enemies.&lt;/p&gt;
+&lt;p&gt;But what are the facts? The play may never narrate facts, or perhaps it always creates distinct rather than three-dimensional images. But the viewer will inevitably accept this as fact. The fact is, Hamilton became the man on the ten-dollar bill, while Burr was always missing out on events and meetings that determine the course of history.&lt;/p&gt;
+&lt;p&gt;The last song of the first act, &amp;ldquo;Non-Stop&amp;rdquo;, reveals Hamilton&amp;rsquo;s complex emotions: after the founding of the country, when opportunities were placed in front of him, he had to choose his life. On one hand, the temptation of enjoying family happiness with his wife; on the other, the awe of history books and the desire for fame. He still stuck to his belief since he was born: not to miss any opportunity.&lt;/p&gt;
+&lt;p&gt;Hamilton is certainly admirable and inspiring. But what kind of person do we want to be? Can we resist the temptation of a beautiful life with happy daily? Can we let go of our reputation and let future generations judge our life&amp;rsquo;s merits and demerits? Are we really people who achieve great things?&lt;/p&gt;
+&lt;p&gt;I believe there are too many metrics to measure a man, too many that it obeys the law of large numbers. That is to say, perhaps we all have abilities that go beyond 3σ, and in this respect, we all are people who achieve great things.&lt;/p&gt;
+&lt;p&gt;I also believe that everything is fate, not up to people. Any of our achievements are just good luck. I happen to have a happy family of origin, happen not to reject learning, happen to get a good score on the college entrance examination, happen to enter the laboratory early and discover some small things, happen to get a position way out of my league when an organization was in urgent need of people, happen to release &amp;ldquo;WithAnyone&amp;rdquo; a month before Nano Banana Pro was born. I do not deny the effort I put in, but I just happen to have the drive to put in the effort.&lt;/p&gt;
+&lt;p&gt;So now, we face a choice: do we choose happy daily, or be part of the history?&lt;/p&gt;
+
+      </description>
+    </item>
     
   </channel>
 </rss>
