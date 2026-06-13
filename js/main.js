@@ -1,275 +1,157 @@
-// Light / Dark theme toggle
-(function () {
-  const defaultTheme = 'system'
+﻿// NEXUS — compact academic layout JS
+import * as THREE from "three";
 
-  const themeToggleButtons = document.querySelectorAll(".theme-toggle");
+// --- Particles ---
+const canvas = document.getElementById("particle-canvas");
+const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(60, innerWidth/innerHeight, 0.1, 100);
+camera.position.z = 35;
 
-  // Change the icons of the buttons based on previous settings or system theme
-  if (
-    localStorage.getItem("color-theme") === "dark" ||
-    (!("color-theme" in localStorage) &&
-      ((window.matchMedia("(prefers-color-scheme: dark)").matches && defaultTheme === "system") || defaultTheme === "dark"))
-  ) {
-    themeToggleButtons.forEach((el) => el.dataset.theme = "dark");
-  } else {
-    themeToggleButtons.forEach((el) => el.dataset.theme = "light");
-  }
+const N = 180;
+const geo = new THREE.BufferGeometry();
+const pos = new Float32Array(N * 3);
+const vel = new Float32Array(N * 3);
+const col = new Float32Array(N * 3);
+const ac = new THREE.Color("#00e5ff"), pu = new THREE.Color("#b388ff"), wh = new THREE.Color("#ffffff");
 
-  // Add click event handler to the buttons
-  themeToggleButtons.forEach((el) => {
-    el.addEventListener("click", function () {
-      if (localStorage.getItem("color-theme")) {
-        if (localStorage.getItem("color-theme") === "light") {
-          setDarkTheme();
-          localStorage.setItem("color-theme", "dark");
-        } else {
-          setLightTheme();
-          localStorage.setItem("color-theme", "light");
-        }
-      } else {
-        if (document.documentElement.classList.contains("dark")) {
-          setLightTheme();
-          localStorage.setItem("color-theme", "light");
-        } else {
-          setDarkTheme();
-          localStorage.setItem("color-theme", "dark");
-        }
-      }
-      el.dataset.theme = document.documentElement.classList.contains("dark") ? "dark" : "light";
-    });
-  });
-
-  // Listen for system theme changes
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-    if (defaultTheme === "system" && !("color-theme" in localStorage)) {
-      e.matches ? setDarkTheme() : setLightTheme();
-      themeToggleButtons.forEach((el) =>
-        el.dataset.theme = document.documentElement.classList.contains("dark") ? "dark" : "light"
-      );
-    }
-  });
-})();
-
-;
-// Hamburger menu for mobile navigation
-
-document.addEventListener('DOMContentLoaded', function () {
-  const menu = document.querySelector('.hamburger-menu');
-  const overlay = document.querySelector('.mobile-menu-overlay');
-  const sidebarContainer = document.querySelector('.sidebar-container');
-
-  // Initialize the overlay
-  const overlayClasses = ['hx-fixed', 'hx-inset-0', 'hx-z-10', 'hx-bg-black/80', 'dark:hx-bg-black/60'];
-  overlay.classList.add('hx-bg-transparent');
-  overlay.classList.remove("hx-hidden", ...overlayClasses);
-
-  function toggleMenu() {
-    // Toggle the hamburger menu
-    menu.querySelector('svg').classList.toggle('open');
-
-    // When the menu is open, we want to show the navigation sidebar
-    sidebarContainer.classList.toggle('max-md:[transform:translate3d(0,-100%,0)]');
-    sidebarContainer.classList.toggle('max-md:[transform:translate3d(0,0,0)]');
-
-    // When the menu is open, we want to prevent the body from scrolling
-    document.body.classList.toggle('hx-overflow-hidden');
-    document.body.classList.toggle('md:hx-overflow-auto');
-  }
-
-  menu.addEventListener('click', (e) => {
-    e.preventDefault();
-    toggleMenu();
-
-    if (overlay.classList.contains('hx-bg-transparent')) {
-      // Show the overlay
-      overlay.classList.add(...overlayClasses);
-      overlay.classList.remove('hx-bg-transparent');
-    } else {
-      // Hide the overlay
-      overlay.classList.remove(...overlayClasses);
-      overlay.classList.add('hx-bg-transparent');
-    }
-  });
-
-  overlay.addEventListener('click', (e) => {
-    e.preventDefault();
-    toggleMenu();
-
-    // Hide the overlay
-    overlay.classList.remove(...overlayClasses);
-    overlay.classList.add('hx-bg-transparent');
-  });
-});
-
-;
-// Copy button for code blocks
-
-document.addEventListener('DOMContentLoaded', function () {
-  const getCopyIcon = () => {
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.innerHTML = `
-      <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-    `;
-    svg.setAttribute('fill', 'none');
-    svg.setAttribute('viewBox', '0 0 24 24');
-    svg.setAttribute('stroke', 'currentColor');
-    svg.setAttribute('stroke-width', '2');
-    return svg;
-  }
-
-  const getSuccessIcon = () => {
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.innerHTML = `
-      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-    `;
-    svg.setAttribute('fill', 'none');
-    svg.setAttribute('viewBox', '0 0 24 24');
-    svg.setAttribute('stroke', 'currentColor');
-    svg.setAttribute('stroke-width', '2');
-    return svg;
-  }
-
-  document.querySelectorAll('.hextra-code-copy-btn').forEach(function (button) {
-    // Add copy and success icons
-    button.querySelector('.copy-icon')?.appendChild(getCopyIcon());
-    button.querySelector('.success-icon')?.appendChild(getSuccessIcon());
-
-    // Add click event listener for copy button
-    button.addEventListener('click', function (e) {
-      e.preventDefault();
-      // Get the code target
-      const target = button.parentElement.previousElementSibling;
-      let codeElement;
-      if (target.tagName === 'CODE') {
-        codeElement = target;
-      } else {
-        // Select the last code element in case line numbers are present
-        const codeElements = target.querySelectorAll('code');
-        codeElement = codeElements[codeElements.length - 1];
-      }
-      if (codeElement) {
-        let code = codeElement.innerText;
-        // Replace double newlines with single newlines in the innerText
-        // as each line inside <span> has trailing newline '\n'
-        if ("lang" in codeElement.dataset) {
-          code = code.replace(/\n\n/g, '\n');
-        }
-        navigator.clipboard.writeText(code).then(function () {
-          button.classList.add('copied');
-          setTimeout(function () {
-            button.classList.remove('copied');
-          }, 1000);
-        }).catch(function (err) {
-          console.error('Failed to copy text: ', err);
-        });
-      } else {
-        console.error('Target element not found');
-      }
-    });
-  });
-});
-
-;
-document.querySelectorAll('.tabs-toggle').forEach(function (button) {
-  button.addEventListener('click', function (e) {
-    // set parent tabs to unselected
-    const tabs = Array.from(e.target.parentElement.querySelectorAll('.tabs-toggle'));
-    tabs.map(tab => tab.dataset.state = '');
-
-    // set current tab to selected
-    e.target.dataset.state = 'selected';
-
-    // set all panels to unselected
-    const panelsContainer = e.target.parentElement.nextElementSibling;
-    Array.from(panelsContainer.children).forEach(function (panel) {
-      panel.dataset.state = '';
-    });
-
-    const panelId = e.target.getAttribute('aria-controls');
-    const panel = panelsContainer.querySelector(`#${panelId}`);
-    panel.dataset.state = 'selected';
-  });
-});
-
-;
-(function () {
-  const languageSwitchers = document.querySelectorAll('.language-switcher');
-  languageSwitchers.forEach((switcher) => {
-    switcher.addEventListener('click', (e) => {
-      e.preventDefault();
-      switcher.dataset.state = switcher.dataset.state === 'open' ? 'closed' : 'open';
-      const optionsElement = switcher.nextElementSibling;
-      optionsElement.classList.toggle('hx-hidden');
-
-      // Calculate position of language options element
-      const switcherRect = switcher.getBoundingClientRect();
-      const translateY = switcherRect.top - window.innerHeight - 15;
-      optionsElement.style.transform = `translate3d(${switcherRect.left}px, ${translateY}px, 0)`;
-      optionsElement.style.minWidth = `${Math.max(switcherRect.width, 50)}px`;
-    });
-  });
-
-  // Dismiss language switcher when clicking outside
-  document.addEventListener('click', (e) => {
-    if (e.target.closest('.language-switcher') === null) {
-      languageSwitchers.forEach((switcher) => {
-        switcher.dataset.state = 'closed';
-        const optionsElement = switcher.nextElementSibling;
-        optionsElement.classList.add('hx-hidden');
-      });
-    }
-  });
-})();
-
-;
-// Script for filetree shortcode collapsing/expanding folders used in the theme
-// ======================================================================
-document.addEventListener("DOMContentLoaded", function () {
-  const folders = document.querySelectorAll(".hextra-filetree-folder");
-  folders.forEach(function (folder) {
-    folder.addEventListener("click", function () {
-      Array.from(folder.children).forEach(function (el) {
-        el.dataset.state = el.dataset.state === "open" ? "closed" : "open";
-      });
-      folder.nextElementSibling.dataset.state = folder.nextElementSibling.dataset.state === "open" ? "closed" : "open";
-    });
-  });
-});
-
-;
-document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".hextra-sidebar-collapsible-button");
-  buttons.forEach(function (button) {
-    button.addEventListener("click", function (e) {
-      e.preventDefault();
-      const list = button.parentElement.parentElement;
-      if (list) {
-        list.classList.toggle("open")
-      }
-    });
-  });
-});
-
-;
-// Back to top button
-
-document.addEventListener("DOMContentLoaded", function () {
-  const backToTop = document.querySelector("#backToTop");
-  if (backToTop) {
-    document.addEventListener("scroll", (e) => {
-      if (window.scrollY > 300) {
-        backToTop.classList.remove("hx-opacity-0");
-      } else {
-        backToTop.classList.add("hx-opacity-0");
-      }
-    });
-  }
-});
-
-function scrollUp() {
-  window.scroll({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
+for (let i = 0; i < N; i++) {
+  pos[i*3] = (Math.random() - 0.5) * 50;
+  pos[i*3+1] = (Math.random() - 0.5) * 50;
+  pos[i*3+2] = (Math.random() - 0.5) * 30;
+  vel[i*3] = (Math.random() - 0.5) * 0.015;
+  vel[i*3+1] = (Math.random() - 0.5) * 0.015;
+  vel[i*3+2] = (Math.random() - 0.5) * 0.008;
+  const m = Math.random(), c = new THREE.Color();
+  if (m < 0.4) c.copy(ac).multiplyScalar(0.3 + Math.random() * 0.6);
+  else if (m < 0.7) c.copy(pu).multiplyScalar(0.3 + Math.random() * 0.6);
+  else c.copy(wh).multiplyScalar(0.2 + Math.random() * 0.4);
+  col[i*3] = c.r; col[i*3+1] = c.g; col[i*3+2] = c.b;
 }
+geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+geo.setAttribute("color", new THREE.BufferAttribute(col, 3));
+const pts = new THREE.Points(geo, new THREE.PointsMaterial({ size: 0.11, vertexColors: true, blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0.7 }));
+scene.add(pts);
+
+const lMat = new THREE.LineBasicMaterial({ vertexColors: true, blending: THREE.AdditiveBlending, depthWrite: false, transparent: true, opacity: 0.4 });
+let lines;
+const MAX_L = 400, CD = 6.5;
+function bLines() {
+  const p = geo.attributes.position.array, lp = [], lc = [];
+  for (let i = 0; i < N; i++) {
+    for (let j = i + 1; j < N; j++) {
+      if (lp.length / 3 >= MAX_L * 2) break;
+      const dx = p[i*3] - p[j*3], dy = p[i*3+1] - p[j*3+1], dz = p[i*3+2] - p[j*3+2];
+      const d = Math.sqrt(dx*dx + dy*dy + dz*dz);
+      if (d < CD) {
+        const a = 1 - d / CD;
+        lp.push(p[i*3], p[i*3+1], p[i*3+2], p[j*3], p[j*3+1], p[j*3+2]);
+        lc.push(ac.r*a*0.2, ac.g*a*0.2, ac.b*a*0.2, ac.r*a*0.2, ac.g*a*0.2, ac.b*a*0.2);
+      }
+    }
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.Float32BufferAttribute(lp, 3));
+  g.setAttribute("color", new THREE.Float32BufferAttribute(lc, 3));
+  return g;
+}
+lines = new THREE.LineSegments(bLines(), lMat);
+scene.add(lines);
+
+const mouse = new THREE.Vector2(), target = new THREE.Vector2();
+addEventListener("mousemove", e => { mouse.x = (e.clientX/innerWidth)*2-1; mouse.y = -(e.clientY/innerHeight)*2+1; });
+
+let t = 0;
+(function anim() {
+  requestAnimationFrame(anim); t += 0.005;
+  const p = geo.attributes.position.array;
+  for (let i = 0; i < N; i++) {
+    p[i*3] += vel[i*3]; p[i*3+1] += vel[i*3+1]; p[i*3+2] += vel[i*3+2];
+    if (Math.abs(p[i*3]) > 25) vel[i*3] *= -1;
+    if (Math.abs(p[i*3+1]) > 25) vel[i*3+1] *= -1;
+    if (Math.abs(p[i*3+2]) > 15) vel[i*3+2] *= -1;
+  }
+  geo.attributes.position.needsUpdate = true;
+  if (Math.floor(t * 80) % 3 === 0) { scene.remove(lines); lines.geometry.dispose(); lines = new THREE.LineSegments(bLines(), lMat); scene.add(lines); }
+  target.x += (mouse.x * 0.06 - target.x) * 0.03; target.y += (mouse.y * 0.06 - target.y) * 0.03;
+  pts.rotation.y += target.x * 0.002; pts.rotation.x += target.y * 0.002;
+  lines.rotation.y = pts.rotation.y; lines.rotation.x = pts.rotation.x;
+  renderer.render(scene, camera);
+})();
+addEventListener("resize", () => { renderer.setSize(innerWidth, innerHeight); camera.aspect = innerWidth/innerHeight; camera.updateProjectionMatrix(); });
+
+// --- Typing ---
+const tw = document.getElementById("typewriter");
+const phrases = ["Hi, I am Hengyuan.", "Welcome to my site.", "I build AI systems.", "I research generative models.", "echo $WHOAMI"];
+let pi = 0, ci = 0, del = false, sp = 80;
+(function loop() {
+  const cur = phrases[pi]; del ? ci-- : ci++; sp = del ? 35 : 80 + Math.random() * 40;
+  tw.textContent = cur.substring(0, ci);
+  if (!del && ci === cur.length) { sp = 2000; del = true; }
+  else if (del && ci === 0) { del = false; pi = (pi + 1) % phrases.length; sp = 400; }
+  setTimeout(loop, sp);
+})();
+
+// --- Language ---
+let lang = "en";
+document.getElementById("lang-toggle").addEventListener("click", () => {
+  lang = lang === "en" ? "zh" : "en";
+  document.getElementById("lang-toggle").textContent = lang === "en" ? "中文" : "EN";
+  document.documentElement.lang = lang === "en" ? "en" : "zh";
+  document.querySelectorAll("[data-en][data-zh]").forEach(el => el.innerHTML = el.getAttribute("data-" + lang));
+});
+
+// --- Scroll Reveal ---
+const ro = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); ro.unobserve(e.target); } }), { threshold: 0.08, rootMargin: "0px 0px -20px 0px" });
+document.querySelectorAll(".reveal").forEach(el => ro.observe(el));
+
+// --- GitHub Stars ---
+async function fetchStars() {
+  let total = 0;
+  const badges = document.querySelectorAll(".star-count[data-repo]");
+
+  try {
+    const r = await fetch("https://api.github.com/users/Doby-Xu/repos?per_page=100");
+    if (r.ok) {
+      const repos = await r.json();
+      total = repos.reduce((s, repo) => s + (repo.stargazers_count || 0), 0);
+      repos.forEach(repo => {
+        badges.forEach(b => { if (b.dataset.repo === "Doby-Xu/" + repo.name) b.textContent = repo.stargazers_count || ""; });
+      });
+    }
+  } catch(e) {}
+
+  for (const repo of ["Ammmob/PixelSmile", "XSafeAI/AI-safety-report"]) {
+    try {
+      const r = await fetch("https://api.github.com/repos/" + repo);
+      if (r.ok) {
+        const d = await r.json();
+        total += d.stargazers_count || 0;
+        badges.forEach(b => { if (b.dataset.repo === repo) b.textContent = "★ " + (d.stargazers_count || ""); });
+      }
+    } catch(e) {}
+  }
+
+  const el = document.getElementById("github-stars");
+  if (el && total > 0) el.textContent = total >= 1000 ? (total/1000).toFixed(total<2000?1:0) + "K+" : total + "+";
+}
+fetchStars();
+
+// --- Navbar ---
+let ls = 0;
+const nav = document.getElementById("navbar");
+addEventListener("scroll", () => {
+  const s = scrollY;
+  nav.style.transform = s <= 0 ? "translateY(0)" : s > ls && s > 60 ? "translateY(-100%)" : "translateY(0)";
+  nav.style.opacity = s <= 0 ? "1" : s > ls && s > 60 ? "0" : "1";
+  ls = s;
+});
+
+// --- Nav highlight ---
+addEventListener("scroll", () => {
+  let cur = "";
+  document.querySelectorAll("section[id]").forEach(s => { if (scrollY >= s.offsetTop - 80) cur = s.id; });
+  document.querySelectorAll(".nav-links a").forEach(a => a.style.color = a.getAttribute("href") === "#" + cur ? "var(--accent)" : "");
+});
