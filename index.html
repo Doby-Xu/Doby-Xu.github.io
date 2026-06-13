@@ -348,6 +348,89 @@
         </div>
     </footer>
 
+    
+    <!-- Critical UI logic — runs immediately, does not depend on Three.js -->
+    <script>
+    (function() {
+
+    // --- Typing Effect ---
+    var tw = document.getElementById("typewriter");
+    var phrases = ["Hi, I am Hengyuan.", "Welcome to my site.", "I build AI systems.", "I research generative models.", "echo $WHOAMI"];
+    var pi = 0, ci = 0, del = false, sp = 80;
+    (function loop() {
+      var cur = phrases[pi];
+      del ? ci-- : ci++; sp = del ? 35 : 80 + Math.random() * 40;
+      tw.textContent = cur.substring(0, ci);
+      if (!del && ci === cur.length) { sp = 2000; del = true; }
+      else if (del && ci === 0) { del = false; pi = (pi + 1) % phrases.length; sp = 400; }
+      setTimeout(loop, sp);
+    })();
+
+    // --- Language Toggle ---
+    window.__lang = "en";
+    document.getElementById("lang-toggle").addEventListener("click", function() {
+      window.__lang = window.__lang === "en" ? "zh" : "en";
+      document.getElementById("lang-toggle").textContent = window.__lang === "en" ? "中文" : "EN";
+      document.documentElement.lang = window.__lang === "en" ? "en" : "zh";
+      document.querySelectorAll("[data-en][data-zh]").forEach(function(el) {
+        el.innerHTML = el.getAttribute("data-" + window.__lang);
+      });
+    });
+
+    // --- Scroll Reveal ---
+    var ro = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add("visible"); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: "0px 0px -20px 0px" });
+    document.querySelectorAll(".reveal").forEach(function(el) { ro.observe(el); });
+
+    // --- GitHub Stars ---
+    (async function() {
+      var total = 0;
+      var badges = document.querySelectorAll(".star-count[data-repo]");
+      try {
+        var r = await fetch("https://api.github.com/users/Doby-Xu/repos?per_page=100");
+        if (r.ok) {
+          var repos = await r.json();
+          total = repos.reduce(function(s, repo) { return s + (repo.stargazers_count || 0); }, 0);
+          repos.forEach(function(repo) {
+            badges.forEach(function(b) { if (b.dataset.repo === "Doby-Xu/" + repo.name) b.textContent = repo.stargazers_count || ""; });
+          });
+        }
+      } catch(e) {}
+      for (var i = 0; i < ["Ammmob/PixelSmile", "XSafeAI/AI-safety-report"].length; i++) {
+        try {
+          var rr = await fetch("https://api.github.com/repos/" + ["Ammmob/PixelSmile", "XSafeAI/AI-safety-report"][i]);
+          if (rr.ok) {
+            var d = await rr.json();
+            total += d.stargazers_count || 0;
+            badges.forEach(function(b) { if (b.dataset.repo === ["Ammmob/PixelSmile", "XSafeAI/AI-safety-report"][i]) b.textContent = "★ " + (d.stargazers_count || ""); });
+          }
+        } catch(e) {}
+      }
+      var el = document.getElementById("github-stars");
+      if (el && total > 0) el.textContent = total >= 1000 ? (total/1000).toFixed(total<2000?1:0) + "K+" : total + "+";
+    })();
+
+    // --- Navbar hide/show ---
+    var ls = 0, nav = document.getElementById("navbar");
+    addEventListener("scroll", function() {
+      var s = scrollY;
+      nav.style.transform = s <= 0 ? "translateY(0)" : s > ls && s > 60 ? "translateY(-100%)" : "translateY(0)";
+      nav.style.opacity = s <= 0 ? "1" : s > ls && s > 60 ? "0" : "1";
+      ls = s;
+    });
+
+    // --- Nav highlight ---
+    addEventListener("scroll", function() {
+      var cur = "";
+      document.querySelectorAll("section[id]").forEach(function(s) { if (scrollY >= s.offsetTop - 80) cur = s.id; });
+      document.querySelectorAll(".nav-links a").forEach(function(a) { a.style.color = a.getAttribute("href") === "#" + cur ? "var(--accent)" : ""; });
+    });
+
+    })();
+    </script>
     <script type="importmap">
     { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
     </script>
